@@ -1,0 +1,225 @@
+/* fonts start
+=============================================*/
+
+/* roboto-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300italic - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500italic - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fonts end
+====================================================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+  background-image: url(../img/background1920x1080.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 1000px) {
+
+}
+
+.wrapper {
+  max-width: 1400px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  background-image: url(../img/logo.svg);
+  display: inline-block;
+  width: 440px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header__item {
+  list-style-type: none;
+}
+
+.header__link {
+  position: relative;
+  padding: 0 12px;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff; 
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -5px;
+  width: calc(100% - 24px);
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: .3s;
+}
+
+.header__link:hover::after {
+  opacity: 1;
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 24px);
+  }
+}
+
+.main {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.h1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.main__button {
+  padding: 100px 50px;
+}
+
+.main__button_link {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  width: 300px;
+  height: 50px;
+  background: transparent;
+  border: #fff solid 1px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 54px;
+}
+
+@media screen and (max-width: 440px) {
+  .main__button {
+    padding: 100px 0px 100px 20px;
+  }
+  .main__button_link {
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+  }
+}
+
+.main__button_link:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-container {
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer_link {
+  font-size: 16px;
+  padding: 0px;
+}
+
+.github,
+.year,
+.rsschool {
+  padding: 15px;
+}

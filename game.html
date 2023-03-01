@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style-game.css">
+  <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <title>Songbird</title>
+</head>
+<body class="body-game">
+  <header class="header-game">
+    <div class="wrapper-game">
+
+      <div class="header-game__wrapper">
+        <div class="header-game__logo">
+          <a href="./index.html" class="header-game__link">
+            <span class="header-game__logo-pic"></span>
+          </a>
+        </div>
+
+        <nav class="header-game__nav">
+          <ul class="header-game__list">
+            <li class="header-game__item">
+              <a href="./index.html" class="header-game__link">Main</a>
+            </li>
+            <li class="header-game__item">
+              <a href="./game.html" class="header-game__link">Game</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-game__score">
+          Score: <span class="score">0</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main-game">
+    <div class="wrapper-game">
+
+      <section class="group-birds">
+        <ul class="group-birds__list">
+          <li class="group-birds__item active">Разминка</li>
+          <li class="group-birds__item">Воробьиные</li>
+          <li class="group-birds__item">Лесные птицы</li>
+          <li class="group-birds__item">Певчие птицы</li>
+          <li class="group-birds__item">Хищные птицы</li>
+          <li class="group-birds__item">Морские птицы</li>
+        </ul>
+      </section>
+
+      <section class="player">
+        <img src="./assets/img/unknown-bird.jpg" alt="Unknown" class="player__bird-pic"></img>
+        <div class="player__content">
+          <div class="player__name-bird"><span class="stars">******</span></div>
+          <div class="audio-player">
+            <audio class="audio-src" controls src=""></audio>
+          </div>
+        </div>
+      </section>
+
+      <section class="birds-content">
+        <div class="birds__list">
+          <ul class="birds__list-group">
+            
+          </ul>
+        </div>
+        <div class="bird__content">
+          Послушайте плеер.
+          Выберите птицу из списка
+        </div>
+      </section>
+
+      <section class="next">
+        Next level
+      </section>
+      
+    </div>
+  </main>
+  <div class="result">
+    <div class="wrapper-game">
+      <div class="result__wrapper">
+        <h1>Поздравляем!</h1>
+        <div class="result-text">Вы прошли викторину и набрали <span class="score1">0</span> из 30 возможных баллов.</div>
+    </div>
+    <div class="result__batton">
+        <span class="result__batton-text">Попробовать еще раз!</span>
+    </div>
+      </div>
+  </div>
+  <script type="module" src="./assets/scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+/* fonts start
+=============================================*/
+
+/* roboto-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300italic - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500italic - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/roboto-v30-latin_cyrillic-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v30-latin_cyrillic-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fonts end
+====================================================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body-game {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+  background: url(../img/background-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrapper-game {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-game__logo-pic {
+  background-image: url(../img/logo.svg);
+  display: inline-block;
+  width: 200px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-game__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.header-game__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header-game__item {
+  list-style-type: none;
+}
+
+.header-game__link {
+  position: relative;
+  padding: 0 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff; 
+}
+
+.header-game__link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -5px;
+  width: calc(100% - 24px);
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: .3s;
+}
+
+.header-game__link:hover::after {
+  opacity: 1;
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 24px);
+  }
+}
+
+.header-game__score {
+  font-size: 20px;
+}
+
+.group-birds {
+  margin: 10px;
+}
+
+.group-birds__list {
+  background-color: #067b46;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.group-birds__item {
+  list-style-type: none;
+  font-size: 20px;
+  flex: auto;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.group-birds__list .active {
+  background-color: #0de282;
+}
+
+.player {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgb(66, 66, 66);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.player__bird-pic {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.playerBirdPic {
+  background-image: url(../img/unknown-bird.jpg);
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.player__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+@media (max-width: 500px) {
+  .player {
+    padding: 0px;
+  }
+  .player__content {
+    padding-left: 0px;
+  }
+}
+
+.player__name-bird {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #7e7e7e;
+}
+
+.birds-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.birds__list {
+  background-color: #424242;
+  padding: 0px;
+  border-radius: 5px;
+  border: 1px solid #6a6a6a;
+  margin: 10px;
+  flex: 0 0 50%;
+  max-width: 48%;
+}
+
+.birds__list-item {
+  list-style-type: none;
+  font-size: 20px;
+  flex: auto;
+  text-align: start;
+  padding: 10px 10px;
+  border-bottom: 1px solid #6a6a6a;
+}
+
+.birds__list-item:last-child {
+  border-bottom: 0px;
+}
+
+.birds__list-item:hover {
+  background-color: #5b5b5b;
+  cursor: pointer;
+}
+
+.li-btn {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.li-btn {
+  background-color: #707070;
+}
+
+.bird__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #424242;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #6a6a6a;
+  margin: 10px;
+  flex: 0 0 50%;
+  max-width: 48%;
+}
+
+.contentWrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 1140px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+}
+
+.bird-img {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.bird-species {
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .birds__list {
+    flex: 0 0 100%;
+  max-width: 98%;
+  }
+  .bird__content {
+    flex: 0 0 100%;
+  max-width: 98%;
+  }
+}
+
+.next {
+  margin: 10px;
+  background-color: #424242;
+  padding: 20px;
+  border-radius: 5px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.next:hover {
+  cursor: pointer;
+}
+
+.result {
+  display: none;
+}
+
+.result__wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #424242;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #6a6a6a;
+  flex-grow: 1;
+  margin: 10px;
+  align-items: center;
+}
+
+.result h1 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.result-text {
+  padding: 30px 0;
+}
+
+.result__batton {
+  margin: 10px;
+  background-color: #067b46;
+  padding: 20px;
+  border-radius: 5px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.result__batton:hover {
+  cursor: pointer;
+  background-color: #00b147;
+}
+
+@media (max-width: 500px) {
+  .result h1 {
+    font-size: 30px;
+  }
+}
